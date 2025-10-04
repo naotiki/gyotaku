@@ -1,0 +1,33 @@
+{
+  "name": "gyotaku",
+  "version": "1.0.0",
+  "description": "ウェブサイトをクロールしてアーカイブするCLIツール",
+  "main": "dist/index.js",
+  "bin": {
+    "gyotaku": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "npm run build && npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "crawler",
+    "archiver",
+    "cli",
+    "web"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cheerio": "^0.22.35",
+    "@types/node": "^24.6.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "axios": "^1.12.2",
+    "cheerio": "^1.1.2",
+    "commander": "^14.0.1"
+  }
+}
