@@ -9,8 +9,8 @@ gyotakuは、指定したウェブサイトをクロールし、HTMLページを
 ## インストール
 
 ```bash
-npm install
-npm run build
+pnpm install
+pnpm run build
 ```
 
 ## 使い方
@@ -18,7 +18,7 @@ npm run build
 ### 基本的な使用方法
 
 ```bash
-npm start -- <URL>
+pnpm start <URL>
 ```
 
 または、ビルド後に直接実行:
@@ -37,19 +37,22 @@ node dist/index.js <URL>
 
 ```bash
 # 基本的なクロール
-npm start -- https://example.com
+pnpm start https://example.com
 
 # 出力先を指定
-npm start -- https://example.com -o ./my-archive
+pnpm start https://example.com -o ./my-archive
 
 # 深さ2まで、待機時間2秒でクロール
-npm start -- https://example.com -d 2 -w 2000
+pnpm start https://example.com -d 2 -w 2000
 ```
 
 ## 機能
 
 - 指定したURLからWebページをクロール
 - HTMLコンテンツをローカルに保存
+- 画像、CSS、JavaScriptなどすべてのリソースをダウンロード（外部オリジン含む）
+- URLと同じディレクトリ構造でファイルを保存
+- ダウンロードしたファイルだけでWebサイトを再現可能（オフライン閲覧対応）
 - 同一ドメイン内のリンクを辿って再帰的にクロール
 - クロール深さの制御
 - リクエスト間隔の調整機能
@@ -59,10 +62,10 @@ npm start -- https://example.com -d 2 -w 2000
 
 ```bash
 # TypeScriptのビルド
-npm run build
+pnpm run build
 
 # 開発モード（ビルド後実行）
-npm run dev
+pnpm run dev
 ```
 
 ## ライセンス
